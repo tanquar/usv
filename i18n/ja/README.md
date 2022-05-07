@@ -20,10 +20,9 @@ Unicode区切り値 (USV) は、データとデータの間にUnicode文字を�
 
 - 最後の改行文字。一部のエディターやツールに対してファイルの互換性を高めることができます。
 
-USVのファイル名の拡張子は".usv "です。
+USVのファイル名の拡張子は ".usv " です。
 
-USVXのファイル名の拡張子は".usvx "です。
-
+USVXのファイル名の拡張子は ".usvx" です。
 
 ## ドキュメント
 
@@ -31,7 +30,7 @@ USVXのファイル名の拡張子は".usvx "です。
 
 - [よくある質問](doc/faq.md)
 
-- [USVで使用するUnicode文字の入力方法](doc/how-to-type-usv-unicode-characters.md)<svg version="1.1" width="14" height="14" viewbox="0 0 16 16" class="octicon octicon-sync" aria-hidden="true"></svg><path fill-rule="evenodd" d="M8 2.5a5.487 5.487 0 00-4.131 1.869l1.204 1.204A.25.25 0 014.896 6H1.25A.25.25 0 011 5.75V2.104a.25.25 0 01.427-.177l1.38 1.38A7.001 7.001 0 0114.95 7.16a.75.75 0 11-1.49.178A5.501 5.501 0 008 2.5zM1.705 8.005a.75.75 0 01.834.656 5.501 5.501 0 009.592 2.97l-1.204-1.204a.25.25 0 01.177-.427h3.646a.25.25 0 01.25.25v3.646a.25.25 0 01-.427.177l-1.38-1.38A7.001 7.001 0 011.05 8.84a.75.75 0 01.656-.834z"></path>
+- [USVで使用するUnicode文字の入力方法](doc/how-to-type-usv-unicode-characters.md)
 
 - [TODOリスト](doc/todo.md)
 
@@ -42,7 +41,6 @@ USVXのファイル名の拡張子は".usvx "です。
 - [USVへの異論](doc/objections.md)
 
 - ASCII区切り値 (ASV) の歴史
-
 
 ## 例
 
@@ -69,6 +67,7 @@ a␟b␞c␟d␝e␟f␞g␟h
 ```
 a␟b␞c␟d␝e␟f␞g␟h␜i␟j␞k␟l␝m␟n␞o␟p
 ```
+
 s
 
 ## USVは簡単で親しみやすい
@@ -82,7 +81,6 @@ USVはさまざまなエディターで扱うことができます。USVに使�
 USVは多様な種類のツールで動作します。USVに使用する文字をパースできるツールなら、どのツールでも動作します。awk、sed、grep、rg、miller などで実際に使えます。
 
 USVはさまざまな言語で動作します。UTF-8の文字コードとレンダリングを扱える言語であれば、どの言語でも動作するはずです。C、Go、Java、JavaScript、Julia、Python、R、Ruby、Rust、Swift、PHPなどで実際に動作します。
-
 
 ## なぜUSVを使うのか
 
@@ -104,8 +102,6 @@ USVは、一般的な検索ツールで問題なく動作します。
 
 USVはエスケープ文字がないため、よりシンプルでわかりやすい使い方や書き方ができます。
 
-
-
 ## USVスクリプトの例
 
 2ユニット×2レコードのUSVファイルのサンプルを作成する:
@@ -117,7 +113,7 @@ $ echo 'a␟b␞c␟d' > example.usv
 `sed` を使ってUSVからCSVに変換する:
 
 ```sh
-$ cat example.usv | sed 's/␟/,/g; s/␞/\n/g;' 
+$ cat example.usv | sed 's/␟/,/g; s/␞/\n/g;'
 a,b
 c,d
 ```
@@ -191,7 +187,6 @@ while IFS= read -n1 -r c; do
 done
 ```
 
-
 ## USVXスクリプトの例
 
 2ユニット×2レコードのUSVXファイルのサンプルを作成する:
@@ -262,7 +257,6 @@ while IFS= read -n1 -r c; do
 done
 printf "\n";
 ```
-
 
 ## 結論
 
