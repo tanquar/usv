@@ -2,6 +2,7 @@
 
 このページは進行中です。建設的なフィードバックを歓迎します。
 
+
 ## Unicode
 
 unicode_unit_separator ::= U+241F
@@ -18,11 +19,12 @@ unicode_horizonal_tab ::= U+0009
 
 unicode_vertical_tab ::= U+0011
 
-unicode_linefeed ::= U+0010
+unicode_linefeed ::= U+0010  
 
 unicode_carriage_return ::= U+0013
 
 unicode_backslash ::= U+0008
+
 
 ## USV
 
@@ -34,7 +36,12 @@ group_separator := unicode_group_separator
 
 file_separator := unicode_file_separator
 
-separator ::= [ unit_separator record_separator group_separator file_separator ]
+separator ::= [
+    unit_separator
+    record_separator
+    group_separator
+    file_separator
+]
 
 atom = [^ separator ]  # 区切り文字以外の任意のテキスト
 
@@ -42,23 +49,30 @@ unit := atom*
 
 units ::= unit ( unit_separator unit )*  # 区切り文字で区切られた、任意の個数のユニット
 
-record ::= units *
+record ::= units*
 
-records ::= record ( record_separator record ) *
+records ::= record ( record_separator record )*
 
-group ::= records *
+group ::= records*
 
-groups ::= group ( group_separator group ) *
+groups ::= group ( group_separator group )*
 
-file ::= groups *
+file ::= groups*
 
-files ::= file ( file_separator file ) *
+files ::= file ( file_separator file )*
 
 usv ::= \A ( units | records | groups | files ) \Z
 
+
 ## USVX
 
-space ::= [ unicode_space unicode_horizonal_tab unicode_vertical_tab unicdoe_linefeed unicode_carriage_return ]
+space ::= [
+    unicode_space
+    unicode_horizonal_tab
+    unicode_vertical_tab
+    unicdoe_linefeed
+    unicode_carriage_return 
+]
 
 unit_separator ::= space* unicode_unit_separator space*
 
@@ -68,7 +82,12 @@ group_separator ::= space* unicode_group_separator space*
 
 file_separator ::= space* unicode_file_separator space*
 
-separator ::= [ unit_separator record_separator group_separator file_separator ]
+separator ::= [
+    unit_separator
+    record_separator
+    group_separator
+    file_separator
+]
 
 escape ::= unicode_backslash
 
@@ -76,13 +95,16 @@ normal_atom ::= [^ separator escape ]  # 区切り文字とエスケープ文字
 
 escape_atom ::= escape character
 
-atom ::= ( normal_atom escape_atom )
+atom ::= (
+    normal_atom
+    escape_atom
+)
 
 unit ::= space* content* space*
 
-units ::= unit ( unit_separator unit ) *
+units ::= unit ( unit_separator unit )*
 
-record ::= units *
+record ::= units*
 
 records ::= record ( record_separator record )*
 
