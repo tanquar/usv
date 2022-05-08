@@ -2,13 +2,13 @@
 
 多くのシステムでは、Altキー (またはOptionキー) を使ってUSVで使用するUnicdoe文字を入力することができます。
 
-- US: Alt (Option) を押しながら「+241f」と入力し、Altを離します。
+* US: Alt (Option) を押しながら「+241f」と入力し、Altを離します。
 
-- RS: Alt (Option) を押しながら「+241e」と入力し、Altを離します。
+* RS: Alt (Option) を押しながら「+241e」と入力し、Altを離します。
 
-- GS: Alt (Option) を押しながら「+241d」と入力し、Altを離します。
+* GS: Alt (Option) を押しながら「+241d」と入力し、Altを離します。
 
-- FS: Alt (Option) を押しながら「+241c」と入力し、Altを離します。
+* FS: Alt (Option) を押しながら「+241c」と入力し、Altを離します。
 
 Apple macOSの場合、最初にセットアップが必要です。
 
