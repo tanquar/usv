@@ -2,39 +2,41 @@
 
 Unicode区切り値 (USV) は、データとデータの間にUnicode文字を配置するデータ形式です。
 
-- ␟ = U+241F = US = ユニット区切り。データユニット間、データベースの列、スプレッドシートのセルなどの区切りに使用します。
+* ␟ = U+241F = US = ユニット区切り。データユニット間、データベースの列、スプレッドシートのセルなどの区切りに使用します。
 
-- ␞ = U+241E = RS = レコード区切り。データレコード間、データベースの行、スプレッドシートの行などの区切りに使用します。
+* ␞ = U+241E = RS = レコード区切り。データレコード間、データベースの行、スプレッドシートの行などの区切りに使用します。
 
-- ␝ = U+241D = GS = グループ区切り。データグループ間、データベースのテーブル、スプレッドシートのグリッドなどの区切りに使用します。
+* ␝ = U+241D = GS = グループ区切り。データグループ間、データベースのテーブル、スプレッドシートのグリッドなどの区切りに使用します。
 
-- ␜ = U+241C = FS = ファイル区切り。データファイル間、データベースのスキーマ、スプレッドシートのフォリオなどの区切りに使用します。
+* ␜ = U+241C = FS = ファイル区切り。データファイル間、データベースのスキーマ、スプレッドシートのフォリオなどの区切りに使用します。
 
 USVのファイル名の拡張子は ".usv " です。
 
-USVのレポジトリは [https://github.com/sixarm/usv](https://github.com/sixarm/usv) です。
+USVのレポジトリは <https://github.com/sixarm/usv> です。
 
 カンマ区切り値 (CSV)、タブ区切り値 (TSV)、ASCII区切り値 (ASV) をご存知なら、すでにUSVもほぼ知っていると言えます。
 
-より多くの機能が必要な場合は、Unicode区切り値拡張 (USVX) を試してみてください。同じUnicode文字を使用し、空白文字のトリム、バックスラッシュのエスケープ、最後の改行といった拡張機能を追加で提供します。[https://github.com/sixarm/usvx](https://github.com/sixarm/usvx)をご覧ください。
+より多くの機能が必要な場合は、Unicode区切り値拡張 (USVX) を試してみてください。同じUnicode文字を使用し、空白文字のトリム、バックスラッシュのエスケープ、最後の改行といった拡張機能を追加で提供します。<https://github.com/sixarm/usvx> をご覧ください。
+
 
 ## ドキュメント
 
 ドキュメントファイルはこちらです:
 
-- [よくある質問](doc/faq.md)
+* [よくある質問](doc/faq.md)
 
-- [USVで使用するUnicode文字の入力方法](doc/how-to-type-usv-unicode-characters.md)
+* [USVで使用するUnicode文字の入力方法](doc/how-to-type-usv-unicode-characters.md)
 
-- [TODOリスト](doc/todo.md)
+* [TODOリスト](doc/todo.md)
 
-- [規格化に向けたBNF (Backus-Naur形式) の提示](doc/bnf.md)
+* [規格化に向けたBNF (Backus-Naur形式) の提示](doc/bnf.md)
 
-- [CSV、TSV、TDF、ASV、DELとの比較](doc/comparisons.md)
+* [CSV、TSV、TDF、ASV、DELとの比較](doc/comparisons.md)
 
-- [USVとUSVXへの異論](doc/objections.md)
+* [USVとUSVXへの異論](doc/objections.md)
 
-- [ASCII区切り値 (ASV) の歴史](history-of-ascii-separated-values.md)
+* [ASCII区切り値 (ASV) の歴史](history-of-ascii-separated-values.md)
+
 
 ## 例
 
@@ -62,6 +64,7 @@ a␟b␞c␟d␝e␟f␞g␟h
 a␟b␞c␟d␝e␟f␞g␟h␜i␟j␞k␟l␝m␟n␞o␟p
 ```
 
+
 ## USVは簡単で親しみやすい
 
 USVは簡単に使用でき、試してみたいと思える親しみやすさを織り込んでいます:
@@ -73,6 +76,7 @@ USVはさまざまなエディターで扱うことができます。USVに使�
 USVは多様な種類のツールで動作します。USVに使用する文字をパースできるツールなら、どのツールでも動作します。awk、sed、grep、rg、miller などで実際に使えます。
 
 USVはさまざまな言語で動作します。UTF-8の文字コードとレンダリングを扱える言語であれば、どの言語でも動作するはずです。C、Go、Java、JavaScript、Julia、Python、R、Ruby、Rust、Swift、PHPなどで実際に動作します。
+
 
 ## なぜUSVを使うのか
 
@@ -89,6 +93,7 @@ USVは、一般的な最新のエディター、フォント、ターミナル�
 USVは文字幅を持った目に見える文字を使用してるため、視認、選択、コピー、ペースト、検索が容易です。
 
 USVはエスケープ文字がないため、よりシンプルでわかりやすい使い方や書き方ができます。
+
 
 ## USVスクリプトの例
 
@@ -175,6 +180,7 @@ while IFS= read -n1 -r c; do
 done
 ```
 
+
 ## 結論
 
 USVは余計なものがなく、シンプルで高速です。
@@ -185,6 +191,6 @@ USVとUSVXは、実際のデータ形式プロジェクトでも役に立って�
 
 USVやUSVXに関する建設的な意見、git issue、pull request、標準化のお手伝いなどをお待ちしています。
 
-[https://github.com/sixarm/usv](https://github.com/sixarm/usv)
+<https://github.com/sixarm/usv>
 
-[https://github.com/sixarm/usvx](https://github.com/sixarm/usvx)
+<https://github.com/sixarm/usvx>
